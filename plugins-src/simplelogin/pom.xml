@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>gg.xelt</groupId>
+    <artifactId>simplelogin</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>SimpleLogin</name>
+    <description>Local login with 1.21.6+ dialogs and chat fallback for older clients.</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Overridable: mvn -Dviaversion.jar=/path/to/ViaVersion.jar package -->
+        <viaversion.jar>/workspaces/XeltSrv/plugins/ViaVersion-5.11.0.jar</viaversion.jar>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>26.2.build.123-stable</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- ViaVersion API, resolved from the server's plugin jar (never bundled) -->
+        <dependency>
+            <groupId>com.viaversion</groupId>
+            <artifactId>viaversion-api</artifactId>
+            <version>5.11.0</version>
+            <scope>system</scope>
+            <systemPath>${viaversion.jar}</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>SimpleLogin-1.0.0</finalName>
+    </build>
+</project>

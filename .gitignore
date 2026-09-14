@@ -1,0 +1,42 @@
+# ─── INICIO BLOQUE DE SEGURIDAD (starter.py) ───
+# ══════════════════════════════════════════════════════════════
+#  ⚠  ARCHIVOS SECRETOS — NUNCA SUBIR A GITHUB  ⚠
+#
+#  Este repositorio puede ser PÚBLICO. Filtrar un webhook, token
+#  o cualquier credencial puede provocar el BANEO PERMANENTAL
+#  de tu cuenta de GitHub y comprometer tu servidor.
+#
+#  NO ELIMINES NINGUNA LÍNEA DE ESTE BLOQUE.
+# ══════════════════════════════════════════════════════════════
+
+.webhook.json
+.webhook.*.json
+*.webhook.json
+webhook.json
+webhook-*.json
+webhook_*.json
+**/.webhook.json
+
+.starter-config.json
+.playit-secret.json
+
+backups/
+
+.env
+.env.*
+*.env
+*.env.*
+.envrc
+secrets/
+.secrets/
+*.secret
+*.token
+*.key
+*.pem
+*.p12
+credentials.json
+service-account.json
+
+!.gitignore
+
+# ─── FIN BLOQUE DE SEGURIDAD (starter.py) ───

@@ -1,0 +1,19 @@
+name: SimpleLogin
+version: 1.0.0
+main: gg.xelt.simplelogin.SimpleLogin
+api-version: '1.21'
+description: Local login with 1.21.6+ dialogs and chat fallback for older clients.
+author: XeltSrv
+softdepend: [ViaVersion]
+commands:
+  login:
+    description: Log in with your password.
+    usage: /login <password>
+    aliases: [l]
+  register:
+    description: Register a new password.
+    usage: /register <password> <confirm>
+    aliases: [reg]
+  logout:
+    description: Log out (you will need to log in again).
+    usage: /logout

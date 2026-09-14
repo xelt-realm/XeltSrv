@@ -1,0 +1,1 @@
+read -p "⚠️ Borrar .git y forzar push a XeltSrv? (s/N): " r && [ "$r" = "s" ] && rm -rf .git && git init && git remote add origin https://github.com/xelt-realm/XeltSrv.git && git add -A && git commit -m "Reset and upload to XeltSrv" && git branch -M main && git push -u origin main --force && git push origin main:master --force
